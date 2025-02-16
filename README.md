@@ -6,6 +6,8 @@ BreezyVoice is a voice-cloning text-to-speech system specifically adapted for Ta
 
 🚀 **Try out our interactive [UI playground](https://huggingface.co/spaces/Splend1dchan/BreezyVoice-Playground) now!** 🚀 
 
+🚀 **[立即體驗 BreezyVoice 語音合成](https://huggingface.co/spaces/Splend1dchan/BreezyVoice-Playground) !** 🚀 
+
 Or visit one of these resources:  
 - [Playground (CLI Inference)](https://www.kaggle.com/code/a24998667/breezyvoice-playground)  
 - [Model](https://huggingface.co/MediaTek-Research/BreezyVoice/tree/main)  
