@@ -2,9 +2,37 @@
 
 BreezyVoice is a voice-cloning text-to-speech system specifically adapted for Taiwanese Mandarin, highlighting phonetic control abilities via auxiliary 注音 (bopomofo) inputs. BreezyVoice is partially derived from [CosyVoice](https://github.com/FunAudioLLM/CosyVoice). BreezyVoice is part of the [Breeze2 family](https://huggingface.co/collections/MediaTek-Research/breeze2-family-67863158443a06a72dd29900)
 
-[Playground](https://www.kaggle.com/code/a24998667/breezyvoice-playground); [Model](https://huggingface.co/MediaTek-Research/BreezyVoice-300M/tree/main); [Paper](https://arxiv.org/abs/2501.17790)
+<img src="https://raw.githubusercontent.com/mtkresearch/BreezyVoice/main/images/flowchart.png" alt="flowchart" width="700"/>
+
+🚀 **Try out our interactive [UI playground](https://huggingface.co/spaces/Splend1dchan/BreezyVoice-Playground) now!** 🚀 
+
+Or visit one of these resources:  
+- [Playground (CLI Inference)](https://www.kaggle.com/code/a24998667/breezyvoice-playground)  
+- [Model](https://huggingface.co/MediaTek-Research/BreezyVoice/tree/main)  
+- [Paper](https://arxiv.org/abs/2501.17790) 
+
 
 Repo Main Contributors: Chia-Chun Lin, Chan-Jan Hsu
+
+## Features
+🔥 BreezyVoice outperforms competing commercial services in terms of naturalness.
+
+
+
+<img src="https://raw.githubusercontent.com/mtkresearch/BreezyVoice/main/images/comparisons.png" alt="comparisons" width="350"/>
+
+ 🔥 BreezyVoice is highly competitive at code-switching scenarios.
+
+| Code-Switching Term Category        | **BreezyVoice**  | Z | Y | U | M |
+|-------------|--------------|---|---|---|---|
+| **General Words** | **8**            | 5 | **8** | **8** | 7 |
+| **Entities**| **9**         | 6 | 4 | 7 | 4 |
+| **Abbreviations**   | **9**            | 8 | 6 | 6 | 7 |
+| **Toponyms**| 3            | 3 | **7** | 3 | 4 |
+| **Full Sentences**| 7           | 7 | **8** | 5 | 3 |
+
+🔥 BreezyVoice supports automatic 注音 annotation, as well as manual 注音 correction (See Inference).
+
 
 ## Install
 
