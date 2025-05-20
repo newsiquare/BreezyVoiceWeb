@@ -2,15 +2,15 @@
 
 支援以 RESTful API 方式直接進行語音合成，請先以 FastAPI 啟動服務：
 ```bash
-uvicorn single_inference:app --host 0.0.0.0 --port 8000
+uvicorn app:app --host 0.0.0.0 --port 8080
 ```
 
 ### POST /synthesize
 語音合成 API，傳入說話人語音、要合成的文字（及可選的語音轉錄），回傳合成語音 wav 檔
 
 #### 參數
-- `speaker_prompt_audio`：要上傳的語者語音檔案（必須，格式建議為 wav）
 - `content_to_synthesize`：要合成的目標文字（必須，UTF-8）
+- `speaker_prompt_audio`：要上傳的語者語音檔案（必須，格式建議為 wav）
 - `speaker_prompt_text_transcription`：語者語音的轉錄（可選，若沒給會自動辨識）
 
 #### 回傳
@@ -18,7 +18,7 @@ uvicorn single_inference:app --host 0.0.0.0 --port 8000
 
 #### curl 範例
 ```
-curl -X POST "http://localhost:8000/synthesize" \
+curl -X POST "http://localhost:8080/synthesize" \
   -F speaker_prompt_audio=@./data/example.wav \
   -F content_to_synthesize="今天天氣真好" \
   --output output.wav
@@ -29,7 +29,7 @@ curl -X POST "http://localhost:8000/synthesize" \
 ```python
 import requests
 
-url = "http://localhost:8000/synthesize"
+url = "http://localhost:8080/synthesize"
 files = {
     "speaker_prompt_audio": open("./data/example.wav", "rb"),
 }
@@ -48,7 +48,7 @@ with open("output.wav", "wb") as f:
 
 
 
-
+## 原本 BreezyVoiceWeb
 BreezyVoice is a voice-cloning text-to-speech system specifically adapted for Taiwanese Mandarin, highlighting phonetic control abilities via auxiliary 注音 (bopomofo) inputs. BreezyVoice is partially derived from [CosyVoice](https://github.com/FunAudioLLM/CosyVoice). BreezyVoice is part of the [Breeze2 family](https://huggingface.co/collections/MediaTek-Research/breeze2-family-67863158443a06a72dd29900)
 
 <img src="https://raw.githubusercontent.com/mtkresearch/BreezyVoice/main/images/flowchart.png" alt="flowchart" width="700"/>
